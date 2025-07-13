@@ -1,0 +1,142 @@
+@import '../../assets/styles/variables.scss';
+
+// root classes
+.closeNav{
+  transform: translate(-100%);
+  
+}
+
+.viewActive{
+  background-color: #155efc33;
+  color: $info_color !important;
+}
+
+// classes comuns
+.btn-hamburger{
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  z-index: 100;
+  border-radius: 5px;
+
+  &:hover{
+    background-color: rgba(128, 128, 128, 0.425);
+  }
+}
+
+.header{
+  top: 0;
+  position: fixed;
+  width: 100dvw;
+  height: 60px;
+  backdrop-filter: blur(4px);
+}
+
+.container-nav{
+  position: fixed;
+  backdrop-filter: blur(4px);
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  transition: all 0.3s ease-in-out;
+  z-index: 99;
+
+  nav{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    background-color: white;
+    width: 258px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.171);
+
+    .header_nav{
+      background-color: $info_color;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: end;
+      color: white;
+      font-weight: bold;
+      font-size: 1.1rem;
+      padding-right: 1.3rem;
+    }
+
+    .buttons{
+      padding: 1rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+
+      .newTransaction{
+        background-color: $success_color;
+        width: 100%;
+        color: white;
+        font-size: .9rem;
+        padding: .6rem;
+        border-radius: 10px;
+        font-weight: 500;
+      }
+
+      .views{
+        display: flex;
+        align-items: center;
+        padding: .6rem;
+        font-size: .9rem;
+        gap: .6rem;
+        font-weight: 500;
+        border-radius: 10px;
+        cursor: pointer;
+        color: $text_color;
+
+        &:hover{
+          background-color: rgba(169, 169, 169, 0.158);
+        }
+      }
+    }
+  }
+}
+
+section{
+  padding: 60px 1.5rem 0;
+  max-width: 768px;
+  height: 100%;
+  margin: auto;
+  background-color: #F9FAFB;
+}
+
+@media (min-width: 1024px) {
+  .closeNav{
+      transform: translate(0%);
+  }
+
+  .btn-hamburger{
+    display: none;
+  }
+
+  .header{
+    display: none;
+  }
+
+  .container-nav{
+    right: auto;
+
+    nav{
+
+      .header_nav{
+        justify-content: center;
+        font-size: 1.2rem;
+        padding-right: 0;
+      }
+    }
+
+  }
+
+  section{
+    position: absolute;
+    left: 258px;
+    right: 0;
+    padding: 1.5rem 3%;
+    max-width: 1700px;
+  }
+}

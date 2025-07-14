@@ -1,4 +1,13 @@
+// Variaveis SASS
 $success_color: #00A63E;
 $info_color: #155DFC;
 $danger_color: #EF4444;
 $text_color: #585858;
+
+// Variaveis CSS
+:root {
+  --v-success_color: #{$success_color};
+  --v-info_color: #{$info_color};
+  --v-danger_color: #{$danger_color};
+  --v-text_color: #{$text_color};
+}

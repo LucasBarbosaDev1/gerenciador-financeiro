@@ -13,33 +13,33 @@
       </div>
 
       <div class="buttons">
-        <button class="newTransaction">
+        <button class="newTransaction" @click="newTransaction">
           <v-icon>mdi-plus</v-icon>
           Nova Transação
         </button>
 
-        <router-link to="/" class="views viewActive">
+        <router-link to="/" class="views" exact-active-class="viewActive" @click="toggleNav">
           <v-icon>mdi-home-outline</v-icon>
           Dashboard
         </router-link>
 
-        <router-link to="/transacoes" class="views">
-          <v-icon>mdi-home-outline</v-icon>
+        <router-link to="/transacoes" class="views" exact-active-class="viewActive" @click="toggleNav">
+          <v-icon>mdi-credit-card-outline</v-icon>
           Trasações
         </router-link>
 
-        <router-link to="/categorias" class="views">
-          <v-icon>mdi-home-outline</v-icon>
+        <router-link to="/categorias" class="views" exact-active-class="viewActive" @click="toggleNav">
+          <v-icon>mdi-tag-outline</v-icon>
           Categorias
         </router-link>
 
-        <router-link to="/contas" class="views">
-          <v-icon>mdi-home-outline</v-icon>
+        <router-link to="/contas" class="views" exact-active-class="viewActive" @click="toggleNav">
+          <v-icon>mdi-cash-multiple</v-icon>
           Contas
         </router-link>
 
-        <router-link to="/relatorios" class="views">
-          <v-icon>mdi-home-outline</v-icon>
+        <router-link to="/relatorios" class="views" exact-active-class="viewActive" @click="toggleNav">
+          <v-icon>mdi-chart-bar-stacked</v-icon>
           Relatórios
         </router-link>
 
@@ -57,8 +57,9 @@
 
 <script setup lang="ts">
   import { computed, ref } from 'vue';
+  import newTransaction from '@/composables/newTransaction';
   
-  // controle do nav
+  // controle do nav'
   const containerNav = ref()
   const navOpen = ref(false)
 

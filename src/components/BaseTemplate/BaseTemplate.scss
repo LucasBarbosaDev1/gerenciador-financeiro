@@ -1,4 +1,4 @@
-@import '../../assets/styles/variables.scss';
+@use '../../assets/styles/variables.scss' as variables;
 
 // root classes
 .closeNav{
@@ -8,7 +8,7 @@
 
 .viewActive{
   background-color: #155efc33;
-  color: $info_color !important;
+  color:  variables.$info_color !important;
 }
 
 // classes comuns
@@ -51,7 +51,7 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.171);
 
     .header_nav{
-      background-color: $info_color;
+      background-color: variables.$info_color;
       height: 60px;
       display: flex;
       align-items: center;
@@ -69,7 +69,7 @@
       gap: 1rem;
 
       .newTransaction{
-        background-color: $success_color;
+        background-color: variables.$success_color;
         width: 100%;
         color: white;
         font-size: .9rem;
@@ -87,7 +87,7 @@
         font-weight: 500;
         border-radius: 10px;
         cursor: pointer;
-        color: $text_color;
+        color: variables.$text_color;
         text-decoration: none;
 
         &:hover{

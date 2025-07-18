@@ -8,13 +8,38 @@
     @click="btnEvent"
   />
 
+  <div class="metric_cards">
+    <MetricCard
+      title="Saldo Total"
+      icon="mdi-wallet"
+      value=8
+    />
+
+    <MetricCard
+      title="Saldo Positivo"
+      icon="mdi-trending-up"
+      iconColor="var(--v-success_color)"
+      value=15450.50
+      valueColor="var(--v-success_color)"
+    />
+
+    <MetricCard
+      title="Saldo Negativo"
+      icon="mdi-trending-down"
+      iconColor="var(--v-danger_color)"
+      value=15450.50
+      valueColor="var(--v-danger_color)"
+    />
+  </div>
+
 </template>
 
 
 <style src="./Contas.scss" lang="scss" scoped></style>
 
 <script setup lang="ts">
-  import HeaderPages from '@/components/root_components/HeaderPages/HeaderPages.vue';
+  import MetricCard from '@/components/root_components/Cards/MetricCard/MetricCard.vue';
+import HeaderPages from '@/components/root_components/HeaderPages/HeaderPages.vue';
 
   const btnEvent = () => {
     console.log('Botão Nova conta');

@@ -1,0 +1,38 @@
+@use '../../../../assets/styles/variables.scss' as variables;
+
+.container_card{
+    background-color: white;
+    width: 100%;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.192);
+    border-radius: 10px;
+    padding: 20px;
+
+    .card_title{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 2rem;
+
+        span{
+            font-size: .9rem;
+            font-weight: bold;
+        }
+
+        .icon{
+            color: variables.$text_color;
+        }
+    }
+
+    .card_value{
+        font-size: 1.4rem;
+        font-weight: bold;
+    }
+}
+
+@media (min-width: 1024px) {
+    .container_card{
+        .card_value{
+            font-size: 1.2rem;
+        }
+    }
+}

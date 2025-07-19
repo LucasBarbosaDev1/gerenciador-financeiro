@@ -43,7 +43,7 @@
   })
 
   // emissão do evento do botao
-  const emit = defineEmits(['click', 'custonEvent']);
+  const emit = defineEmits(['click']);
 
   const handleClick = () => {
     emit('click')

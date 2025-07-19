@@ -1,0 +1,73 @@
+@use '../../../../assets/styles/variables.scss' as variables;
+
+.card{
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.192);
+  display: flex;
+  flex-direction: column;
+
+  .card_header{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+    .card_description{
+      display: flex;
+      gap: .7rem;
+      align-items: center;
+
+      .icon_card{
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+      }
+
+      .infos_card{
+        h3{
+          font-size: 1rem;
+        }
+
+        span{
+          border: 1px solid;
+          padding: 5px 8px;
+          border-radius: 10px;
+          font-size: .8rem;
+        }
+      }
+    }
+
+    .card_btn{
+      display: flex;
+      justify-content: space-between;
+      gap: 1.5rem;
+      font-size: .9rem;
+
+      button{
+        border-radius: 10px;
+        padding: 5px;
+
+        &:hover{
+          background-color: rgba(169, 169, 169, 0.301);
+        }
+      }
+
+      .btn_del{
+        color: variables.$danger_color;
+      }
+
+    }
+  }
+
+  .card_value{
+    margin-top: 2rem;
+    text-align: end;
+    font-size: 1.3rem;
+    font-weight: bold;
+  }
+
+}

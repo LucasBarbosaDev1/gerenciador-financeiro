@@ -1,0 +1,21 @@
+@use '../../assets/styles/variables.scss' as variables;
+
+.list_trasactions{
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.192);
+  border-radius: 10px;
+  padding: 1rem;
+
+  .title_list{
+    margin-bottom: 1.5rem;
+
+    h2{
+      font-size: 1rem;
+    }
+  }
+
+  .container_list{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+}

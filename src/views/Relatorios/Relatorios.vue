@@ -8,6 +8,28 @@
     @click="btnEvent"
   />
 
+  <div class="filter_reports">
+
+    <v-select
+      variant="outlined"
+      class="select_custom"
+      clearable
+      density="comfortable"
+      label="Período"
+      :items="['Último mês', 'Últimos 3 meses', 'Últimos 12 meses']"
+    ></v-select>
+
+    <v-select
+      variant="outlined"
+      class="select_custom" 
+      clearable
+      density="comfortable"
+      label="Tipo de Relatório"
+      :items="['Receita vs Despesas', 'Despesas por Categoria', 'Evolução do Saldo']"
+    ></v-select>
+  </div>
+
+
   <div class="metric_cards">
     <MetricCard 
       title="Receita Total"
@@ -46,7 +68,7 @@
 
 </template>
 
-<style src="./Relatorios.scss" lang="scss" scoped></style>
+<style src="./Relatorios.scss" lang="scss"></style>
 
 <script setup lang="ts">
   import MetricCard from '@/components/root_components/Cards/MetricCard/MetricCard.vue';

@@ -10,6 +10,7 @@
 
   <div class="filter_transaction">
     <v-autocomplete
+      variant="outlined"
       class="select_custom"
       clearable
       density="comfortable"
@@ -19,6 +20,7 @@
 
 
     <v-select
+      variant="outlined"
       class="select_custom"
       clearable
       density="comfortable"
@@ -27,6 +29,7 @@
     ></v-select>
 
     <v-select
+      variant="outlined"
       class="select_custom" 
       clearable
       density="comfortable"
